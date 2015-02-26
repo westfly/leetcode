@@ -15,7 +15,20 @@ void generate_array(int a[],int n)
 		a[i] = random()%n + 1;
 	}
 }
-
+/*特化版本*/
+template<>
+void print_array(const int array[], size_t n)
+{
+	static const int kMaxInLine = 10;
+	int count = 0;
+	while(count < n) {
+		printf("%d\t",array[count]);
+		if ((++count%kMaxInLine) == 0) {
+			putchar('\n');
+		}
+	}
+	putchar('\n');
+}
 ListNode* create_slist(int n)
 {
 	return create_list(n, 1);

@@ -36,19 +36,11 @@ struct Interval {
 template<typename T>
 void print_array(const T array[], size_t n)
 {
-
+	printf("not void\n");
 }
 
 
-template<int>
-void print_array(const int array[], size_t n)
-{
-	while(n>0) {
-		printf("%d\t",array[--n]);
-	}
-	putchar('\n');
 
-}
 /** 生成随机的n个数 */
 void generate_array(int a[],int n);
 /** 生成无头节点单链表*/
