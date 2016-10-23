@@ -1,6 +1,10 @@
 #include "code_utils.h"
 
-
+int search_insert_stl(int A[], int n, int target)
+{
+	 int* lower = lower_bound(A, A + n, target);
+	 return lower - A;
+}
 int searchInsert(int A[], int n, int target) {
 	int first = 0;
 	int last = n;

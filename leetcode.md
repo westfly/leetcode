@@ -1,5 +1,6 @@
 leetcode
 
+
 **two sum**
 
 ```
@@ -35,3 +36,34 @@ for (int i = 0; i < n; ++i)
   return (hash_map[element], i + 1);
 }
 ```
+## Add Two Numbers
+```
+You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+```
+链表的归并算法，简单题，主要是主要通过有头节点，能够简化代码的实现。
+
+```
+```
+## Longest Substring Without Repeating Characters
+
+```
+Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.
+```
+[xxx](http://blog.csdn.net/likecool21/article/details/10858799)
+** Median of Two Sorted Arrays ** 
+
+[Median of Two Sorted Arrays](https://oj.leetcode.com/problems/median-of-two-sorted-arrays/)
+
+```
+There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+```
+
+这道题是某年Yahoo的笔试题目。
+
+暴力解法是将A和B数组，组成C数组，然后直接取C[(m+n)/2]，空间复杂度为O(n+m)，
+归并的时间复杂度为O(m+n)。
+可以将题目转换一下，在一个m
+

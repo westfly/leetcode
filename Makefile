@@ -9,13 +9,13 @@ src_list :=$(shell ls -rt $(deploy_code)/*cc | tail -n1)
 #obj_list = $(patsubst %.cc, $(deploy_obj)/%.o, $(notdir $(src_list)))
 obj_list = $(patsubst %.cc, %.o, $(src_list))
 all: $(obj_list)
-
+cc=clang++
 $(obj_list): %.o:%.cc
 	file_name=bin/$(basename $(notdir $<))
-	g++ -o bin/$(basename $(notdir $<)) --std=c++11 $< src/code_utils.cpp
+	$(cc) -o bin/$(basename $(notdir $<)) --std=c++11 $< src/code_utils.cpp
 	#g++ -o $(file_name) --std=c++11 $< src/code_utils.cpp
 	# excute command 
-	bin/$(basename $(notdir $<))
+	./bin/$(basename $(notdir $<))
 clean:
 	@echo $(deploy_code)
 	@echo $(src_list)

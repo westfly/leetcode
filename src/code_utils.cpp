@@ -8,11 +8,12 @@
 #include "code_utils.h"
 #include <stdlib.h>
 #include <time.h>
+#include <random>
 void generate_array(int a[],int n)
 {
 	srand(time(NULL));
 	for(int i=0; i<n; i++) {
-		a[i] = random()%n + 1;
+		a[i] = rand()%n + 1;
 	}
 }
 /*特化版本*/
@@ -28,6 +29,21 @@ void print_array(const int array[], size_t n)
 		}
 	}
 	putchar('\n');
+}
+
+void generate_array(int n, vector<int>* vt)
+{
+	int array[n];
+	
+	generate_array(array, n);
+	generate_array(array, n, vt);
+}
+void generate_array(int array[],int n, std::vector<int>* vt)
+{
+	vt->clear();
+	for(int i = 0; i < n; ++i) {
+		vt->push_back(array[i]);
+	}
 }
 ListNode* create_slist(int n)
 {
@@ -98,7 +114,7 @@ ListNode* merge_list_tail(ListNode* h1, ListNode* h2)
 }
 ListNode* merge_list(ListNode* h1, ListNode* h2)
 {
-	int r = random();
+	int r = rand();
 	if (r%2)
 	{
 		return merge_list_prev(h1, h2);
@@ -133,7 +149,7 @@ ListNode* reverse_slist_iterative(ListNode* head)
 }
 ListNode* reverse_slist(ListNode* head)
 {
-	int r = random();
+	int r = rand();
 	if (r%2)
 	{
 		return reverse_slist_iterative(head);

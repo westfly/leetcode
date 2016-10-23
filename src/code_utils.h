@@ -14,6 +14,8 @@
 #include <cstdio>
 #include <cassert>
 #include <algorithm>
+#include <iterator>
+#include <iostream>
 using namespace std;
 struct TreeNode {
   int val;
@@ -39,10 +41,15 @@ void print_array(const T array[], size_t n)
 	printf("not void\n");
 }
 
-
-
+template<typename T>
+void print_array(const vector<T> &ctor) {
+	copy(ctor.begin(), ctor.end(), ostream_iterator<T>(cout, " "));
+  putchar('\n');
+}
+void generate_array(int n, std::vector<int>* vt);
 /** 生成随机的n个数 */
 void generate_array(int a[],int n);
+void generate_array(int a[],int n, std::vector<int>* vt);
 /** 生成无头节点单链表*/
 ListNode* create_slist(int n);
 ListNode* create_slist(int a[],int n);

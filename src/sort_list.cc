@@ -1,6 +1,7 @@
 #include "code_utils.h"
 /*
- * Sort a linked list in O(n log n) time using constant space complexity.
+ * Sort a linked list in O(n log n) time using
+ * constant space complexity.
  * 对于数组来说，满足时间复杂度必然要求二分。
  * 排序局限于归并排序、快速排序
  * 此处选用归并排序
