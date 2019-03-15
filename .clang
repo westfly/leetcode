@@ -1,0 +1,12 @@
+-Wall
+-Wc++-compat
+-Wno-sign-compare
+-Wextra
+-Weverything
+-pedantic
+-Wno-sign-conversion
+-std=c++17
+-Wno-reserved-id-macro
+-I/usr/include/c++/7
+-I/usr/include/c++/7/bits
+-I/usr/include/c++/7/x86_64-amazon-linux
