@@ -1,8 +1,12 @@
 url=$1
 file=$(echo $url | awk -F'/' '{des=$NF;
-    if (des) {
+    if (des == "") {
         des=$(NF-1);
     }
-    printf("%s.cc\n", des);
+    printf("src/%s.cc\n", des);
 }' | sed 's/-/_/g')
-touch src/$file
+echo "$file"
+if [[ ! -f $file ]];then
+    cp tools/code.snappit $file
+fi
+touch $file
