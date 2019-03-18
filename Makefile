@@ -18,6 +18,7 @@ $(obj_list): %.o:%.cc
 	#g++ -o $(file_name) --std=c++11 $< src/code_utils.cpp
 	# excute command 
 	./bin/$(basename $(notdir $<))
+	cat $<
 clean:
 	@echo $(deploy_code)
 	@echo $(src_list)
