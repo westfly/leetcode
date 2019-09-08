@@ -1,12 +1,17 @@
 #include "code_utils.h"
-
+auto gucciGang = []() {
+  std::ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
+  return 0;
+}();
+#pragma GCC optimise("Ofast")
 class Solution {
-  public:
+ public:
 };
 
-int main(int argc, char *argv[])
-{
-    (void)argc;    
-    (void)argv;    
-    return 0;
+int main(int argc, char *argv[]) {
+  (void)argc;
+  (void)argv;
+  return 0;
 }
