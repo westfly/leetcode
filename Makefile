@@ -11,7 +11,7 @@ obj_list = $(patsubst %.cc, %.o, $(src_list))
 all: $(obj_list)
 #cc=clang++
 cc=g++
-flag=--std=c++11
+flag=--std=c++11 -g -fsanitize=address
 $(obj_list): %.o:%.cc
 	file_name=bin/$(basename $(notdir $<))
 	$(cc) -o bin/$(basename $(notdir $<)) $(flag) $< src/code_utils.cpp
